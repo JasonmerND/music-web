@@ -1,0 +1,6 @@
+songFile
+songImg
+songLyric
+*.pyc
+migrations
+__pycache__

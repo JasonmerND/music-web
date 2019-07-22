@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('music/index/',include('index.urls')),
+    # 音乐网站的路由
+    path('music',include('index.urls')),
     path('music/ranking/',include('ranking.urls')),
     path('music/play/',include('play.urls')),
     path('music/search/',include('search.urls')),
