@@ -47,6 +47,8 @@ INSTALLED_APPS = [
 
 ]
 
+AUTH_USER_MODEL = 'user.MyUser'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -148,3 +150,4 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR, "music_apps/static"),
 ]
 STATIC_URL = '/static/'
+
