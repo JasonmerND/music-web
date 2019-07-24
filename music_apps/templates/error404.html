@@ -11,6 +11,6 @@
 </head>
 <body>
 <img src="{% static "image/error_404.png" %}">
-<div class="error_main"><a href='/' class="index">回到首页</a></div>
+<div class="error_main"><a href='{% url 'index' %}' class="index">回到首页</a></div>
 </body>
 </html>

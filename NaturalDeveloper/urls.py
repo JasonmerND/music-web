@@ -15,13 +15,29 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.views import static
+from django.conf import settings
+from django.conf.urls import url
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
     # 音乐网站的路由
+    path('music/admin/', admin.site.urls),
     path('music',include('index.urls')),
     path('music/ranking/',include('ranking.urls')),
     path('music/play/',include('play.urls')),
     path('music/search/',include('search.urls')),
     path('music/user/',include('user.urls')),
     path('music/comment/',include('comment.urls')),
+    url(
+        '^static/(?P<path>.*)$',
+        static.serve,
+        {
+        'document_root':settings.STATIC_ROOT
+        },
+        name='static'),
 ]
+
+from index import views
+
+handler404 = views.page_not_found

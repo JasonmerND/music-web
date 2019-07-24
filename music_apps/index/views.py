@@ -20,3 +20,7 @@ def indexView(request):
     download_ranking = Dynamic.objects.select_related('song').order_by('-dynamic_download').all()[:6]
     all_ranking = [search_ranking, download_ranking]
     return render(request, 'index.html', context=locals())
+
+
+def page_not_found(request, exception):
+    return render(request, 'error404.html', status=404)

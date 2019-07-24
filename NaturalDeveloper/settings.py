@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, "music_apps"))
 SECRET_KEY = 'ms2v8i7zshmfy6i(-j4xke)v6vddy52fr%4e8n$b(=q+qi-v-6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -145,9 +145,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, "music_apps/static"),
-]
 STATIC_URL = '/static/'
+
+#设置上线后使用的静态资源路径
+STATIC_ROOT = "G:/django/NaturalDeveloper/music_apps/static/"
+
+
+# STATICFILES_DIRS =[
+#     os.path.join(BASE_DIR, "music_apps/static"),
+# ]
+
 

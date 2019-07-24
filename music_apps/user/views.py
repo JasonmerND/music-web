@@ -26,7 +26,7 @@ def loginView(request):
                 user = user.first()
                 if check_password(password, user.password):
                     login(request, user)
-                    return redirect('/music/user/home')
+                    return redirect('/music/user/home/1')
                 else:
                     tips = '密码错误'
             else:

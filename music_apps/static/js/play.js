@@ -674,7 +674,7 @@ require(['jquery','com',"jquery.jplayer"], function ($,com){
         com.msg('歌曲列表中只有一首歌曲！');
         return false;
       }
-      location.href = location.origin + '/' + url;
+      location.href = location.origin + url;
     }else if(run == 'cl_all'){
       if(songlist.find('li').length<=1)return;
       com.alert({
